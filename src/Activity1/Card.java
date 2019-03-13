@@ -35,6 +35,9 @@ public class Card {
      */
     public Card(String cardRank, String cardSuit, int cardPointValue) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+        this.rank=cardRank;
+        this.suit=cardSuit;
+        this.pointValue=cardPointValue;
     }
 
 
@@ -44,7 +47,7 @@ public class Card {
      */
     public String suit() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+return suit;
     }
 
     /**
@@ -53,7 +56,7 @@ public class Card {
      */
     public String rank() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+return rank;
     }
 
     /**
@@ -62,7 +65,7 @@ public class Card {
      */
     public int pointValue() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+return pointValue;
     }
 
     /** Compare this card with the argument.
@@ -73,7 +76,16 @@ public class Card {
      */
     public boolean matches(Card otherCard) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+return this.rank==otherCard.rank&&this.pointValue==otherCard.pointValue&&this.suit==otherCard.suit;
+    }
+    public void setSuit(String suit){
+        this.suit=suit;
+    }
+    public void setRank(String rank){
+        this.rank =rank;
+    }
+    public void setPointValue(int pointValue){
+        this.pointValue = pointValue;
     }
 
     /**
@@ -89,7 +101,7 @@ public class Card {
     @Override
     public String toString() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+return "Card{" + "suit='" + suit + '\'' + ", rank=' " + '\'' + ", pointValue=" + pointValue + '}';
     }
 }
 
